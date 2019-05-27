@@ -2,6 +2,8 @@
 
 # ns3 App Store
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/4c56f14285e3439abb7f53a3c6cb6be2)](https://app.codacy.com/app/mishal23/ns-3-AppStore?utm_source=github.com&utm_medium=referral&utm_content=mishal23/ns-3-AppStore&utm_campaign=Badge_Grade_Dashboard)
+
 ns3 App Store is a is a web application for a module database in ns-3. It is built with [Python][0] using the [Django Web Framework][1].
 
 This project has the following basic apps:
