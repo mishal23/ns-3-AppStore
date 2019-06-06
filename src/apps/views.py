@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
+from django.conf import settings
 from .models import App, Release, Tag, Comment, Screenshot, Download
 from markdownx.utils import markdownify
 from .forms import CommentForm
@@ -66,6 +67,7 @@ def appPage(request, name):
             comments = Comment.objects.filter(app=app)
             go_back_to_url = "/"
             go_back_to_title = "home"
+            discus_identifier = settings.DISQUS_IDENTIFIER
             context = {
                 'app': app,
                 'editors': editors,
@@ -76,6 +78,7 @@ def appPage(request, name):
                 # 'comments':comments,
                 'go_back_to_url': go_back_to_url,
                 'go_back_to_title': go_back_to_title,
+                'discus_identifier': discus_identifier
             }
             return render(request, 'page.html', context)
 
