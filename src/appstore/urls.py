@@ -21,6 +21,7 @@ urlpatterns = [
     path('search/', include('search.urls', namespace='search')),
     path('backend/', include('backend.urls', namespace='edit')),
     path('auth/', include('social_django.urls', namespace='social')),
+    path('comments/', include('django_comments_xtd.urls')),
 ]
 
 # User-uploaded files like profile pics need to be served in development

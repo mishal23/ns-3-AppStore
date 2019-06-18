@@ -82,6 +82,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
 
     'material',
     'material.frontend',
@@ -100,7 +101,12 @@ INSTALLED_APPS = (
     'backend',
     'help',
 
+    'django_comments_xtd',
+    'django_comments',
+
 )
+
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -207,3 +213,23 @@ SOCIAL_AUTH_PIPELINE = (
     'social_core.pipeline.user.user_details',
 )
 
+COMMENTS_APP = 'django_comments_xtd'
+
+#  To help obfuscating comments before they are sent for confirmation.
+COMMENTS_XTD_SALT = (b"Timendi causa est nescire. "
+                     b"Aequam memento rebus in arduis servare mentem.")
+
+# Source mail address used for notifications.
+COMMENTS_XTD_FROM_EMAIL = "<email here>"
+
+# Contact mail address to show in messages.
+COMMENTS_XTD_CONTACT_EMAIL = "<email here>"
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_PORT = "587"
+EMAIL_HOST_USER = "<email here>"
+EMAIL_HOST_PASSWORD = "<password here>"
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = "<email here>"

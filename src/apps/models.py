@@ -73,6 +73,9 @@ class App(models.Model):
                 app=self).latest('date')).date
         self.save()
 
+    def get_absolute_url(self):
+        return f"/app/{self.name}"
+
 
 class Release(models.Model):
     app = models.ForeignKey(App, on_delete=models.CASCADE)

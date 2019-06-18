@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load comments %}
 
 {% block more_head %}
 <link rel="stylesheet" type="text/css" media="all" href="{% get_static_prefix %}apps/css/app_page.css" />
@@ -402,6 +403,21 @@
 <button class="btn btn-mini" id="rate-btn">Rate it <span id="rating">5</span> star(s)</button>
 </script>
 {# End vote popover content #}
+
+{% if comment_count %}
+<hr/>
+<div class="comments">
+  {% render_comment_list for app %}
+</div>
+{% endif %}
+
+<div class="card card-block mb-5">
+  <div class="card-body">
+    <h4 class="card-title text-center pb-3">Post your comment</h4>
+      {% render_comment_form for app %}
+  </div>
+</div>
+
 
 <script type="text/javascript" src="{% get_static_prefix %}apps/js/app_page.js"></script>
 
