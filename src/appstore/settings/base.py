@@ -39,6 +39,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'social_django.context_processors.backends',
                 'social_django.context_processors.login_redirect',
+                'django.template.context_processors.request',
             ],
         },
     },
@@ -82,6 +83,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
 
     'material',
     'material.frontend',
@@ -92,6 +94,7 @@ INSTALLED_APPS = (
     'haystack',
     'social_django',
     'rest_framework',
+    'disqus',
 
     'profiles',
     'accounts',
@@ -101,6 +104,8 @@ INSTALLED_APPS = (
     'help',
 
 )
+
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -207,3 +212,5 @@ SOCIAL_AUTH_PIPELINE = (
     'social_core.pipeline.user.user_details',
 )
 
+DISQUS_API_KEY = '<insert API key here>'
+DISQUS_WEBSITE_SHORTNAME = 'ns-3-AppStore'

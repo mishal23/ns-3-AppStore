@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load disqus_tags %}
 {% load static %}
 
 {% block more_head %}
@@ -402,6 +403,9 @@
 <button class="btn btn-mini" id="rate-btn">Rate it <span id="rating">5</span> star(s)</button>
 </script>
 {# End vote popover content #}
+
+{% disqus_dev %}
+{% disqus_show_comments %}
 
 <script type="text/javascript" src="{% get_static_prefix %}apps/js/app_page.js"></script>
 
