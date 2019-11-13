@@ -6,7 +6,7 @@ from django.conf.urls.static import static
 import profiles.urls
 import accounts.urls
 import apps.urls
-import search.urls
+# import search.urls
 import backend.urls
 from . import views
 
@@ -18,7 +18,7 @@ urlpatterns = [
     path('markdownx/', include('markdownx.urls')),
     path('', include('accounts.urls', namespace='accounts')),
     path('app/', include('apps.urls', namespace='apps')),
-    path('search/', include('search.urls', namespace='search')),
+    # path('search/', include('search.urls', namespace='search')),
     path('backend/', include('backend.urls', namespace='edit')),
     path('download/', include('download.urls', namespace='download')),
     path('auth/', include('social_django.urls', namespace='social')),

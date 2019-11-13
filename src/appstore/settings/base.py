@@ -92,7 +92,7 @@ INSTALLED_APPS = (
     'crispy_forms',
     'easy_thumbnails',
     'markdownx',
-    'haystack',
+    # 'haystack',
     'social_django',
     'rest_framework',
     'star_ratings',
@@ -100,7 +100,7 @@ INSTALLED_APPS = (
     'profiles',
     'accounts',
     'apps',
-    'search',
+    # 'search',
     'backend',
     'help',
     'download',
@@ -191,16 +191,16 @@ THUMBNAIL_EXTENSION = 'png'     # Or any extn for your thumbnails
 #}
 
 # If using ElasticSearch 2
-HAYSTACK_CONNECTIONS = {
-    'default': {
-        'ENGINE': 'haystack.backends.elasticsearch2_backend.Elasticsearch2SearchEngine',
-        'URL': 'http://127.0.0.1:9200/',
-        'INDEX_NAME': 'haystack',
-    },
-}
+# HAYSTACK_CONNECTIONS = {
+#     'default': {
+#         'ENGINE': 'haystack.backends.elasticsearch2_backend.Elasticsearch2SearchEngine',
+#         'URL': 'http://127.0.0.1:9200/',
+#         'INDEX_NAME': 'haystack',
+#     },
+# }
 
-HAYSTACK_DEFAULT_OPERATOR = 'OR'
-HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
+# HAYSTACK_DEFAULT_OPERATOR = 'OR'
+# HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 
 SOCIAL_AUTH_USER_FIELDS = ['email']
 SOCIAL_AUTH_PIPELINE = (
