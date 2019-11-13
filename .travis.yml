@@ -15,6 +15,7 @@ install:
 # Run the unit test
 script:
   - cd src
+  - python manage.py migrate
   - cp appstore/settings/local.sample.env appstore/settings/local.env
   - coverage run manage.py test
   - cd ..
