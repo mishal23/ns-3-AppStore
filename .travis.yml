@@ -7,13 +7,16 @@ language: python
 # Set the python version to 3.6
 python: 3.6
 
+env:
+  - DJANGO=2.0
+
 # Install the codecov pip dependency
 install:
   - pip install -r requirements.txt
   - pip install codecov
 
 # Run the unit test
-script:
+script: 
   - cd src
   - python manage.py migrate
   - cp appstore/settings/local.sample.env appstore/settings/local.env
