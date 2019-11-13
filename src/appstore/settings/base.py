@@ -100,7 +100,7 @@ INSTALLED_APPS = (
     'profiles',
     'accounts',
     'apps',
-    # 'search',
+    'search',
     'backend',
     'help',
     'download',
